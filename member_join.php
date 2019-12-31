@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
   header("Content-Type: text/html; charset=utf-8");
   require_once("connMysql.php");
   //確認帳號是否已註冊

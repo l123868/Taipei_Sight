@@ -19,7 +19,7 @@ create table information
 	 ) ENGINE=INNODB;
 
 create table user
-	(user_ID		varchar(8),
+	(user_ID		int(8) AUTO_INCREMENT,
 	 name			varchar(20) not null,
 	 account		varchar(20),
 	 password		varchar(10),
@@ -32,7 +32,7 @@ create table user
 	 
 
 create table favorite
-	(user_ID		varchar(8),
+	(user_ID		int(8),
 	 sight_ID		varchar(8),
 	 primary key (user_ID, sight_ID),
 	 foreign key (user_ID) references user (user_ID)
@@ -43,7 +43,7 @@ create table favorite
 
 create table comment
 	(comment_ID		varchar(8),
-	 user_ID		varchar(8),
+	 user_ID		int(8),
 	 sight_ID		varchar(8),
 	 grade			numeric(2, 1),
 	 context			varchar(200),
